@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="black-keys">
+        <kbd>W</kbd>
+        <kbd>E</kbd>
+        <kbd>T</kbd>
+        <kbd>Y</kbd>
+        <kbd>U</kbd>
+    </div>
+    <div class="white-keys">
+    <kbd>A</kbd>
+    <kbd>S</kbd>
+    <kbd>D</kbd>
+    <kbd>F</kbd>
+    <kbd>G</kbd>
+    <kbd>H</kbd>
+    <kbd>J</kbd>
+    </div>
+</div>
+<script>
+    let pressedKey = "";
+    let keyboardKeys = ["A", "S", "D", "F", "G", "H", "J", "W", "E", "T", "Y", "U"]
+    document.addEventListener("keydown", function (event) {
+        pressedKey = event.key.toUpperCase();
+        if (keyboardKeys.includes(pressedKey)) {
+            let audio = new Audio(`source/${event.key.toUpperCase()}.mp3`);
+            audio.play();
+        } else {
+            console.log("Only the keyboard keys please...")
+        }
+    });
+</script>
+</body>
+</html>

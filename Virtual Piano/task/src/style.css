@@ -1,0 +1,41 @@
+body {
+    background-color: green;
+}
+
+.container {
+    width: max-content;
+    margin: 20% auto;
+}
+
+.black-keys kbd {
+    color: white;
+    display: inline-block;
+    width: 2px;
+    padding: 50px 10px 10px;
+    background-color: black;
+    border: solid 1px gray;
+    border-radius: 3px;
+    position: relative;
+    top: 70px;
+    left: 10px;
+    z-index: 1;
+    margin-left: 28px;
+}
+
+.white-keys kbd {
+    display: inline-block;
+    width: 40px;
+    height: 100%;
+    padding: 50px 10px 10px;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 3px;
+    margin-left: -5px;
+    position: relative;
+}
+
+
+
+
+
+
